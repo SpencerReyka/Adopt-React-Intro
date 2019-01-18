@@ -1,14 +1,19 @@
 {
-    "presets": [
-      "react",
-      [
-        "env",
-        {
-          "targets": {
-            "browsers": ["last 2 versions"]
-          }
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions"]
         }
-      ]
+      }
     ],
-    "plugins": ["transform-class-properties"]
+    "react"
+  ],
+  "plugins": ["transform-class-properties"],
+  "env": {
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
   }
+}
